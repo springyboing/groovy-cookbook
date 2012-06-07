@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: groovy
+# Cookbook Name:: grails
 # Recipe:: default
 #
 # Copyright 2012, YOUR_COMPANY_NAME
@@ -11,12 +11,12 @@ include_recipe "java"
 
 case node["platform"]
 when "ubuntu"
-  #sudo apt-add-repository ppa:groovy-dev/groovy
+  #sudo apt-add-repository ppa:groovy-dev/grails
   #sudo apt-get update
-  #sudo apt-get install groovy
+  #sudo apt-get install grails
   package 'python-software-properties'
-  apt_repository "groovy" do
-    uri "http://ppa.launchpad.net/groovy-dev/groovy/ubuntu "
+  apt_repository "grails" do
+    uri "http://ppa.launchpad.net/groovy-dev/grails/ubuntu "
     distribution node['lsb']['codename']
     components ["main"]
     keyserver "keyserver.ubuntu.com"
@@ -26,7 +26,7 @@ when "ubuntu"
   end
 end
 
-package 'groovy' do 
-  version node['groovy']['version']
+package 'grails' do
+  version node['grails']['version']
   action :install
 end
