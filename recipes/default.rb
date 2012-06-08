@@ -26,7 +26,6 @@ when "ubuntu"
   end
 end
 
-package 'grails' do
-  version node['grails']['version']
+package "grails-#{node['grails']['version']}" do
   action :install
 end
