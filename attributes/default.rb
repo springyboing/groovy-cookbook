@@ -1,5 +1,5 @@
-default['groovy']['version'] = "1.8.6"
-default['groovy']['archive_name']  = "groovy-binary-#{node['grails']['version']}.zip"
+default['groovy']['version'] = "2.0.5"
+default['groovy']['archive_name']  = "groovy-binary-#{node['groovy']['version']}.zip"
 default['groovy']['source_url']  = "http://dist.groovy.codehaus.org/distributions/#{node['groovy']['archive_name']}"
-# default['groovy']['install_path']  = "/usr/local/grails-#{node['grails']['version']}"
+# default['groovy']['install_path']  = "/usr/local/grails-#{node['groovy']['version']}"
 default['groovy']['owner']  = "vagrant"
